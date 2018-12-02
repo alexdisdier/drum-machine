@@ -1,0 +1,65 @@
+@import "./utils/_helpers.scss";
+
+.App {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+}
+
+header {
+  color: #222;
+}
+
+.pad-controller {
+  display: flex;
+  flex-direction: column;
+  padding: em(16px);
+  border-radius: em(5px);
+  background-color: $color-pad;
+
+  .left-flex {
+    padding-right: em(16px);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
+}
+
+#screen {
+  padding: em(8px);
+  font-size: em(8px);
+  color: #fff;
+  background-color: $color-screen;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    text-align: left;
+  }
+  
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../../utils/_helpers.scss";
+
+.drum-pad {
+  flex: 1 0 25%;
+  margin: em(5px);
+  height: 100px;
+}
+
+.btn-drum {
+  margin: em(8px);
+  border-radius: em(5px);
+  color: #fff;
+  background-color: $color-pad;
+
+  &:nth-child(-n+3) {
+    margin-top: 0;
+    border-color: $color-topPad;
+    color: $color-topPad;
+  }
+
+  &:nth-child(n+4):nth-child(-n+6){
+    border-color: $color-midPad;
+    color: $color-midPad;
+  }
+
+  &:nth-child(n+7) {
+    border-color: $color-lowPad;
+    color: $color-lowPad;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
