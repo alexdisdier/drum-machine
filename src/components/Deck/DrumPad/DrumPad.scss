@@ -16,16 +16,34 @@
     margin-top: 0;
     border-color: $color-topPad;
     color: $color-topPad;
+    box-shadow: 0px 3px 3px $color-topPad;
+
+    &:active {
+      box-shadow: 0 0 #666;
+      transform: translateY(3px);
+    }
   }
 
   &:nth-child(n+4):nth-child(-n+6){
     border-color: $color-midPad;
     color: $color-midPad;
+    box-shadow: 0px 3px 3px $color-midPad;
+
+    &:active {
+      box-shadow: 0 0 #666;
+      transform: translateY(3px);
+    }
   }
 
   &:nth-child(n+7) {
     border-color: $color-lowPad;
     color: $color-lowPad;
+    box-shadow: 0px 3px 3px $color-lowPad;
+
+    &:active {
+      box-shadow: 0 0 #666;
+      transform: translateY(3px);
+    }
   }
 
   &:hover {

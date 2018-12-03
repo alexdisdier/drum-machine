@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import DrumPad from './DrumPad/DrumPad';
 
-import '../../utils/_helpers.scss';
 import './Deck.scss';
 
 class Deck extends Component {

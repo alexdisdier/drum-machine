@@ -1,0 +1,33 @@
+@import "../../../utils/_helpers.scss";
+
+#btn-power-container{
+  margin-top: em(16px);
+  margin-bottom: em(16px);
+
+  label {
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: em(4px);
+    font-size: em(12px);
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: em(-6px);
+      padding-bottom: 0;
+      font-size: em(8px);
+    }
+  }
+
+  input {
+    padding-right: em(24px);
+    background: #7B7C78;
+    color: #fff;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background: linear-gradient(orange, 80%, yellow);
+    }
+  }
+}

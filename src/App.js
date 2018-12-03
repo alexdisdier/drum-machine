@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
 import Deck from './components/Deck/Deck';
-import Power from './components/Deck/Power/Power';
+import Controls from './components/Controls/Controls';
 
-import './utils/_helpers.scss';
 import './App.scss';
 
 class App extends Component {
@@ -13,15 +12,9 @@ class App extends Component {
       <header>
        <h1>Pad Controller</h1>
       </header>
-        <div id="display" className="pad-controller">
+        <div className="pad-controller">
           <div className="left-flex">
-            <div id="screen">
-              <ul>
-               <li>id: 1</li>
-               <li>clip name: pad name</li>
-              </ul>
-            </div>
-            <Power/>
+            <Controls />
           </div>
           <div className="right-flex">
             <Deck />
