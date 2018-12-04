@@ -11,6 +11,44 @@ IN WORKING PROGRESS... See a live version running this template - https://alexdi
 ```bash
 
 drum-machine
+├── .git
+├── node_modules
+├── public
+├── src
+│   ├── components
+│   │   ├── Controls
+│   │   │   ├── Display
+│   │   │   │   ├── Display.js
+│   │   │   │   ├── Display.scss
+│   │   │   ├── Power
+│   │   │   │   ├── Power.js
+│   │   │   │   ├── Power.scss
+│   │   │   ├── Volume
+│   │   │   │   ├── Volume.js
+│   │   │   │   ├── Volume.scss
+│   │   │   ├── Controls.js  
+│   │   │   └── Controls.scss
+│   │   ├── Deck
+│   │   │   ├── DrumPad
+│   │   │   │   ├── DrumPad.js
+│   │   │   │   ├── DrumPad.scss
+│   │   │   ├──  Deck.js
+│   │   │   └── Decks.scss
+│   ├── utils
+│   │   ├── _helpers.scss
+│   ├── App.js
+│   ├── App.scss
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   └── serviceWorker.js
+├── .gitattributes
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+
 ```
 
 ## Built With

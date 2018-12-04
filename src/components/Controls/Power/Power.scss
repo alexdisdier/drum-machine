@@ -19,15 +19,21 @@
 
   input {
     width: em(36px);
-    background: #7B7C78;
-    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &:focus {
       outline: none;
     }
-
-    &:active {
-      background: linear-gradient(orange, 80%, yellow);
-    }
   }
+}
+
+.power-on {
+  background: linear-gradient(orange, 80%, yellow);
+}
+
+.power-off {
+  background: #7B7C78;
 }

@@ -2,11 +2,14 @@
 
 #display {
   padding: em(8px);
-  font-size: em(8px);
+  font-size: em(14px);
   color: #fff;
   background-color: $color-screen;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
-            inset 5px 5px 8px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5), inset 5px 5px 8px rgba(0,0,0,0.5);
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: em(8px);
+  }
 
   ul {
     margin: 0;

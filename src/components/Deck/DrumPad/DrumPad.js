@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import '../../../utils/_helpers.scss';
 import './DrumPad.scss';
 
 class DrumPad extends Component {
@@ -59,9 +58,9 @@ class DrumPad extends Component {
     this.playSound = this.playSound.bind(this);
   }
 
-  playSound(e){
+  playSound(){
     var audio = document.getElementById("Q");
-    console.log(audio);
+    // console.log(audio);
     audio.play();
   }
 
@@ -72,7 +71,8 @@ class DrumPad extends Component {
           <audio key={e+1} className="clip" id={e.key} src={e.url}>
           </audio>
         </button>
-      ))
+      )
+    );
   }
 }
 

@@ -6,6 +6,7 @@ import Controls from './components/Controls/Controls';
 import './App.scss';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App" id="drum-machine">

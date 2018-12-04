@@ -6,37 +6,24 @@ class Power extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      switch: false
+      isToggleOn: false
     }
 
-    this.powerSwitch = this.powerSwitch.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  powerSwitch() {
-    if (!this.state.switch) {
-      this.setState({
-        switch: true
-      });
-    } else {
-      this.setState({
-        switch: false
-      });
-    }
+  handleClick() {
+      this.setState(state => ({
+        isToggleOn: !state.isToggleOn
+      }));
   }
 
   render() {
 
-    let inputStyle = {
-      background: '#7B7C78'
-    };
-    if (this.state.switch){
-      inputStyle.background = 'linear-gradient(orange, 80%, yellow)';
-    }
-
     return (
       <div id="btn-power-container">
         <label htmlFor="btn-power">Power</label>
-        <input type="button" id="btn-power" style={inputStyle} onClick={this.powerSwitch}/>
+        <input type="button" id="btn-power" className={this.state.isToggleOn ? 'power-on' : 'power-off'} onClick={this.handleClick}/>
       </div>
     );
   }
