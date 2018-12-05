@@ -3,75 +3,39 @@ import React, { Component } from 'react';
 import './DrumPad.scss';
 
 class DrumPad extends Component {
+// source for javascript event keyCodes: https://keycode.info/
   constructor(props){
     super(props);
-    this.state = {
-      pad : [
-        {
-          key: 'Q',
-          name: 'heater 1',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'W',
-          name: 'heater 2',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'E',
-          name: 'heater 3',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'A',
-          name: 'heater 4',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'S',
-          name: 'heater 5',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'D',
-          name: 'heater 6',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'Z',
-          name: 'heater 7',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'X',
-          name: 'heater 8',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        },
-        {
-          key: 'C',
-          name: 'heater 9',
-          url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-        }
-      ]
-    }
 
     this.playSound = this.playSound.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
+
   playSound(){
-    var audio = document.getElementById("Q");
-    // console.log(audio);
-    audio.play();
+    const audio = document.getElementById(this.props.keyPushed);
+    console.log(audio);
+
+    console.log(this.props.dataFromDeck);
+    if (this.props.dataFromDeck === 'play'){
+      // console.log("I'm listening to my parent Deck.js and Deck.js is listening to my grandparents App.js. Power.js hasn't been clicked so I'm on pause");
+      audio.play();
+    }
+  }
+
+  handleKeyPress(e) {
+    if (e.keyCode === this.props.keyCode) {
+      this.playSound();
+    }
   }
 
   render() {
     return (
-    this.state.pad.map(e =>
-        <button className="drum-pad btn-drum" onClick={this.playSound}>{e.key}
-          <audio key={e+1} className="clip" id={e.key} src={e.url}>
-          </audio>
-        </button>
-      )
+      <button id={this.props.soundId} className="drum-pad btn-drum" onClick={this.playSound}>{this.props.keyPushed}
+        <audio className="clip" id={this.props.keyPushed} src={this.props.url} >
+        </audio>
+      </button>
+
     );
   }
 }

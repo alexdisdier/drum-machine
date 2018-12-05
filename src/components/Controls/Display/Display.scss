@@ -2,6 +2,8 @@
 
 #display {
   padding: em(8px);
+  width: 180px;
+  height: 40px;
   font-size: em(14px);
   color: #fff;
   background-color: $color-screen;
@@ -16,6 +18,14 @@
     padding: 0;
     list-style: none;
     text-align: left;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
   }
 
 }
