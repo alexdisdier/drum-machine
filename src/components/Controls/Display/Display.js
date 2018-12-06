@@ -7,8 +7,8 @@ class Display extends Component {
     return (
       <div id="display">
         <ul className={this.props.dataFromControl}>
-         <li>id: 1</li>
-         <li>clip name: pad name</li>
+         <li>key: {this.props.displayId}</li>
+         <li>sound: {this.props.displayName}</li>
         </ul>
       </div>
     );

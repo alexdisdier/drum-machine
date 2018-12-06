@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Display from './Display/Display';
 import Power from './Power/Power';
-import Volume from './Volume/Volume';
+// import Volume from './Volume/Volume';
 
 import './Controls.scss';
 
@@ -33,12 +33,22 @@ class Controls extends Component {
     }
   }
 
+  displayName(){
+    console.log('this is the name in Deck.js ' + test);
+
+    // This props interact with parent component (App.js)
+    this.props.onControlsClick();
+  }
+
   render(){
     return (
       <div id="controls">
-        <Display dataFromControl={this.state.controlData}/>
+        <Display  dataFromControl={this.state.controlData}
+                  displayName = {this.props.onDisplayName}
+                  displayId = {this.props.onDisplayId}
+        />
         <Power onPowerClick={this.powerClicked} />
-        <Volume />
+        {/*<Volume />*/}
       </div>
     );
   }

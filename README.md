@@ -4,7 +4,7 @@ This is a drum machine.
 
 ## Usage example
 
-IN WORKING PROGRESS... See a live version running this template - https://alexdisdier.github.io/drum-machine/
+See a live version running this template - https://alexdisdier.github.io/drum-machine/
 
 ## Directory Structure
 
@@ -12,6 +12,7 @@ IN WORKING PROGRESS... See a live version running this template - https://alexdi
 
 drum-machine
 ├── .git
+├── build
 ├── node_modules
 ├── public
 ├── src
@@ -70,3 +71,5 @@ drum-machine
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 * Deploy React to github pages [codeburst](https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d)
+
+* Passing values from child component to grand parents [stackoverflow answer](https://stackoverflow.com/questions/41121667/reactjs-how-to-pass-values-from-child-component-to-grand-parent-component) by [DarkKnight](https://stackoverflow.com/users/4578017/darkknight)

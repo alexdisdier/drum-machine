@@ -2,7 +2,7 @@
 
 #display {
   padding: em(8px);
-  width: 180px;
+  width: auto;
   height: 40px;
   font-size: em(14px);
   color: #fff;
@@ -11,6 +11,7 @@
 
   @media (min-width: $breakpoint-tablet) {
     font-size: em(8px);
+    width: 180px;
   }
 
   ul {
