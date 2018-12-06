@@ -66,7 +66,7 @@ drum-machine
 
 ## Acknowledgments
 
-* This is part of Front End Libraries Projects in order to get the certification from [FreeCodeCamp](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer)
+* This is part of Front End Libraries Projects in order to get the certification from [FreeCodeCamp](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine)
 
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
