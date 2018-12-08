@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './Display.scss';
 
-class Display extends Component {
-  render(){
-    return (
-      <div id="display">
-        <ul className={this.props.dataFromControl}>
-         <li>key: {this.props.displayId}</li>
-         <li>sound: {this.props.displayName}</li>
-        </ul>
-      </div>
-    );
-  }
-}
+const display = (props) => {
+  return (
+    <div id="display">
+      <ul className={props.dataFromControl}>
+        <li>key: {props.displayId}</li>
+        <li>sound: {props.displayName}</li>
+      </ul>
+    </div>
+  )
+};
 
-export default Display;
+export default display;

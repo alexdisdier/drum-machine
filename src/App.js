@@ -18,10 +18,10 @@ class App extends Component {
    }
 
     this.audioToggle = this.audioToggle.bind(this);
-    this.handleDisplay = this.handleDisplay.bind(this);
+    this.displayHandler = this.displayHandler.bind(this);
   }
 
-  audioToggle() {
+  audioToggle = () => {
     // console.log('App.js is the grandparent');
 
     if (this.state.audio === 'pause'){
@@ -37,13 +37,11 @@ class App extends Component {
     }
   }
 
-  handleDisplay(id, name) {
-    this.setState({
+  displayHandler = (id, name) => this.setState({
       displayId: id,
       displayName: name
-    })
-  }
-
+  });
+  
   render() {
     return (
       <div className="App" id="drum-machine">
@@ -59,7 +57,7 @@ class App extends Component {
           <div className="right-flex">
             {/* passing a callback as a prop to a child */}
             <Deck dataFromApp = {this.state.audio}
-                  handlerDisplayFromGrandParent = {this.handleDisplay}
+                  handlerDisplayFromGrandParent = {this.displayHandler}
             />
           </div>
         </div>

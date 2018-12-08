@@ -18,7 +18,6 @@ class Controls extends Component {
 
   powerClicked = () => {
     // console.log('Controls.js is the parent');
-
     // This props interact with parent component (App.js)
     this.props.onControlsClick();
 
@@ -33,12 +32,8 @@ class Controls extends Component {
     }
   }
 
-  displayName(){
-    console.log('this is the name in Deck.js ' + test);
-
-    // This props interact with parent component (App.js)
-    this.props.onControlsClick();
-  }
+  // This props interact with parent component (App.js)
+  displayName = () => this.props.onControlsClick();
 
   render(){
     return (

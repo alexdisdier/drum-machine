@@ -80,10 +80,8 @@ class Deck extends Component {
     this.handleParentProps = this.handleParentProps.bind(this);
   }
 
-  handleParentProps(){
-    this.props.handlerDisplayFromParent();
-  }
-
+  handleParentProps = () => this.props.handlerDisplayFromParent();
+  
   render() {
     return (
       <div className="deck">{

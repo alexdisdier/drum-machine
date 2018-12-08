@@ -11,12 +11,11 @@ class DrumPad extends Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
-  playSound(){
+  playSound = () => {
     const audio = document.getElementById(this.props.keyPushed);
     this.props.displayGrandParent(audio.id, audio.innerText);
 
     if (this.props.dataFromDeck === 'play'){
-
       audio.play();
     }
   }
