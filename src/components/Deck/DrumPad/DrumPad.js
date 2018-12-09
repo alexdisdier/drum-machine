@@ -7,15 +7,15 @@ class DrumPad extends Component {
   constructor(props){
     super(props);
 
-    this.playSound = this.playSound.bind(this);
+    this.playSoundHandler = this.playSoundHandler.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
-  playSound = () => {
+  playSoundHandler = () => {
     const audio = document.getElementById(this.props.keyPushed);
     this.props.displayGrandParent(audio.id, audio.innerText);
 
-    if (this.props.dataFromDeck === 'play'){
+    if (this.props.dataFromDeck){
       audio.play();
     }
   }
@@ -30,13 +30,13 @@ class DrumPad extends Component {
 
   handleKeyPress(e) {
     if (e.keyCode === this.props.keyCode) {
-      this.playSound();
+      this.playSoundHandler();
     }
   }
 
   render() {
     return (
-      <button id={this.props.keyId} className="drum-pad btn-drum" onClick={this.playSound}>{this.props.keyPushed}
+      <button id={this.props.keyId} className="drum-pad btn-drum" onClick={this.playSoundHandler}>{this.props.keyPushed}
         <audio className="clip" id={this.props.keyPushed} src={this.props.url}>{this.props.keyName}
         </audio>
       </button>

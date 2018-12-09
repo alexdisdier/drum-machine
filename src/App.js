@@ -10,31 +10,21 @@ class App extends Component {
   constructor(props) {
    super(props)
    this.state = {
-     audio: 'pause',
+     power: false,
 
      // the data will be received from Deck.js
      displayName: '',
      displayId: ''
    }
 
-    this.audioToggle = this.audioToggle.bind(this);
+    this.togglePowerHandler = this.togglePowerHandler.bind(this);
     this.displayHandler = this.displayHandler.bind(this);
   }
 
-  audioToggle = () => {
-    // console.log('App.js is the grandparent');
-
-    if (this.state.audio === 'pause'){
-      this.setState({
-        audio: 'play'
-      });
-      // console.log('Power is on');
-    } else {
-      this.setState({
-        audio: 'pause'
-      });
-      // console.log('Power is off');
-    }
+  togglePowerHandler = () => {
+    // console.log('power');
+    const doesPower = this.state.power;
+    this.setState({ power: !doesPower });
   }
 
   displayHandler = (id, name) => this.setState({
@@ -50,13 +40,13 @@ class App extends Component {
       </header>
         <div className="pad-controller">
           <div className="left-flex">
-            <Controls onControlsClick={this.audioToggle}
+            <Controls onControlsClick={this.togglePowerHandler}
                       onDisplayName = {this.state.displayName}
                       onDisplayId = {this.state.displayId}/>
           </div>
           <div className="right-flex">
             {/* passing a callback as a prop to a child */}
-            <Deck dataFromApp = {this.state.audio}
+            <Deck dataFromApp = {this.state.power}
                   handlerDisplayFromGrandParent = {this.displayHandler}
             />
           </div>
