@@ -2,6 +2,8 @@
 
 This is a drum machine.
 
+![screenshot of a drum machine](/src/screenshot.jpg?raw=true "screenshot of a drum machine")
+
 ## Usage example
 
 See a live version running this template - https://alexdisdier.github.io/drum-machine/
